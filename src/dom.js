@@ -91,7 +91,7 @@ function addEvent(query = 'body', event = 'onclick', eventFunction) {
  * @param {Array}    events        The specific event to capture on the element,
  * @param {Function} eventFunction The function to trigger when the event is captured.
  */
-export function addQueryListener(query = 'body', events = [], eventFunction = function() {}) {
+export function addEvents(query = 'body', events = [], eventFunction = function() {}) {
     events.forEach(e => addEvent(query, 'on' + e, eventFunction));
 }
 

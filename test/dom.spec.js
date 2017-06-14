@@ -1,15 +1,15 @@
-import * as dom  from '../src/dom';
+import * as dom from '../src/dom';
 
 describe('dom', () => {
 
-    describe('addQueryListener', () =>  {
+    describe('addEvents', () =>  {
 
-        it('Must be a function', () => expect(dom.addQueryListener).toEqual(jasmine.any(Function)));
+        it('Must be a function', () => expect(dom.addEvents).toEqual(jasmine.any(Function)));
 
         it('Allows a single onclick event', () => {
             let clickTriggered = false;
 
-            dom.addQueryListener('body', ['click'], () => {
+            dom.addEvents('body', ['click'], () => {
                 clickTriggered = true;
             });
 
@@ -25,11 +25,11 @@ describe('dom', () => {
             let clickTriggered = false;
             let changeTriggered = false;
 
-            dom.addQueryListener('body', ['click'], (e) => {
+            dom.addEvents('body', ['click'], (e) => {
                 clickTriggered = true;
             });
 
-            dom.addQueryListener('body', ['change'], (e) => {
+            dom.addEvents('body', ['change'], (e) => {
                 changeTriggered = true;
             });
 
@@ -50,7 +50,7 @@ describe('dom', () => {
         it('Attach a onclick and onchange event in the same function call', () => {
             let eventCount = false;
 
-            dom.addQueryListener('body', ['click', 'change'], (e) => {
+            dom.addEvents('body', ['click', 'change'], (e) => {
                 eventCount ++;
             });
 
