@@ -4,6 +4,12 @@ var commonjs = require('rollup-plugin-commonjs');
 var babel = require('rollup-plugin-babel');
 
 var rollupPlugins = [
+    istanbul({
+        exclude: [
+            './node_modules/**',
+            './test/**/*.js'
+        ]
+    }),
     nodeResolve({
         jsnext: true,
         browser: true
@@ -40,7 +46,6 @@ module.exports = function (karma) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/**/*.js': ['coverage'],
             'test/**/*.js': ['rollup']
         },
 
