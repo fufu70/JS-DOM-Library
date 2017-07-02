@@ -8,7 +8,7 @@
  */
 
 /**
- * Checks to see if the query exists inside of the dom, if so then the 
+ * Checks to see if the query exists inside of the dom, if so then the
  * existsFunction is called.
  * 
  * @param  {String}   query          The query to get the dom object.
