@@ -8,6 +8,7 @@ To get the repository to work simply run:
 ```shell
 >$ npm install
 >$ npm test
+>$ bash bin/install-hooks.sh
 ```
 
 ## addEvents
