@@ -32,13 +32,7 @@
       2,
       "smart"
     ],
-    "indent": [
-      2,
-      "tab",
-      {
-        "SwitchCase": 1
-      }
-    ],
+    "indent": 2,
     "jasmine/missing-expect": 1,
     "jasmine/named-spy": 2,
     "jasmine/no-disabled-tests": 1,
